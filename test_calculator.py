@@ -1,3 +1,7 @@
+#https://github.com/mpaquette1-svg/lab11-MP-MEG.git
+#Partner 1: Matthew Paquette
+#Partner 2: Miguel Gutierrez
+
 import unittest
 import calculator
 import math
@@ -6,7 +10,7 @@ import math
 class TestCalculator(unittest.TestCase):
     ######## Partner 2
     def test_add(self):
-        assert calculator.add(2,3) == 0
+        assert calculator.add(2,3) == 5
         assert calculator.add(-4,9) == 5
         assert calculator.add(0,0) == 0
 
@@ -24,8 +28,8 @@ class TestCalculator(unittest.TestCase):
 
     def test_divide(self): # 3 assertions
         self.assertEqual(calculator.div(10,2),5)
-        self.assertEqual(calculator.div(-9,3),-3)
-        self.assertIsNone(calculator.div(10,0))
+        self.assertEqual(calculator.div(-9,3), -3)
+        self.assertIsNone(calculator.div(10,0), 0)
     # ##########################
 
     ######## Partner 2
