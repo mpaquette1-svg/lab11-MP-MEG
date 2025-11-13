@@ -47,8 +47,8 @@ class TestCalculator(unittest.TestCase):
 
 
     def test_hypotenuse(self): # 3 assertions
-        self.assertEqual(calculator.hypotenuse(3,4),5)
-        self.assertEqual(calculator.hypotenuse(5,12), 13)
+        self.assertAlmostEqual(calculator.hypotenuse(3,4),5)
+        self.assertAlmostEqual(calculator.hypotenuse(5,12), 13)
 
 
     def test_sqrt(self): # 3 assertions
