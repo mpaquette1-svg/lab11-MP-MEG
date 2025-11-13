@@ -11,9 +11,9 @@ class TestCalculator(unittest.TestCase):
         assert calculator.add(0,0) == 0
 
     def test_subtract(self):
-        assert calculator.sub(10,4) == 6
-        assert calculator.sub(-2,-8) == 6
-        assert calculator.sub(-3,3) == -6
+        assert calculator.subtract(10,4) == 6
+        assert calculator.subtract(-2,-8) == 6
+        assert calculator.subtract(-3,3) == -6
     # ##########################
 
     ######## Partner 1
@@ -33,26 +33,26 @@ class TestCalculator(unittest.TestCase):
         self.assertRaises(ZeroDivisionError, calculator.div, 0, 7)
 
     def test_logarithm(self): # 3 assertions
-        self.assertAlmostEqual(calculator.log(2, 8), 3.0)
-        self.assertAlmostEqual(calculator.log(10, 1000), 3.0)
+        self.assertAlmostEqual(calculator.logarithm(2, 8), 3.0)
+        self.assertAlmostEqual(calculator.logarithm(10, 1000), 3.0)
 
         a, b = 3, 81
         expected = math.log(b) / math.log(a)
-        self.assertAlmostEqual(calculator.log(a, b), expected)
+        self.assertAlmostEqual(calculator.logarithm(a, b), expected)
 
     def test_log_invalid_base(self): # 1 assertion
-        self.assertRaises(ValueError, calculator.log, 1, 10)
-        self.assertRaises(ValueError, calculator.log, -2, 8)
-        self.assertRaises(ValueError, calculator.log, 2, 0)
-        self.assertRaises(ValueError, calculator.log, 2, -5)
+        self.assertRaises(ValueError, calculator.logarithm, 1, 10)
+        self.assertRaises(ValueError, calculator.logarithm, -2, 8)
+        self.assertRaises(ValueError, calculator.logarithm, 2, 0)
+        self.assertRaises(ValueError, calculator.logarithm, 2, -5)
     
     ######## Partner 1
     def test_log_invalid_argument(self): # 1 assertion
         with self.assertRaises(ValueError):
-            calculator.log(0,5)
+            calculator.logarithm(0,5)
         with self.assertRaises(ValueError):
-            calculator.log(-10,10)
-        self.assertAlmostEqual(calculator.log(8,2),3)
+            calculator.logarithm(-10,10)
+        self.assertAlmostEqual(calculator.logarithm(8,2),3)
 
     def test_hypotenuse(self): # 3 assertions
         self.assertEqual(calculator.hypotenuse(3,4),5)
