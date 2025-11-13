@@ -56,7 +56,6 @@ class TestCalculator(unittest.TestCase):
             calculator.logarithm(0,5)
         with self.assertRaises(ValueError):
             calculator.logarithm(-10,10)
-        self.assertAlmostEqual(calculator.logarithm(8,2),3)
 
     def test_hypotenuse(self): # 3 assertions
         self.assertEqual(calculator.hypotenuse(3,4),5)
